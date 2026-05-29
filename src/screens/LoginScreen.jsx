@@ -10,60 +10,39 @@ export default function LoginScreen({ navigation }) {
 
   const handleLogin = () => {
     setError('');
-    
-    if (!email || !password) {
-      setError('Please fill in all fields.');
-      return;
-    }
-    if (!validateEmail(email)) {
-      setError('Invalid email format.');
-      return;
-    }
-
+    if (!email || !password) return setError('Please fill in all fields.');
+    if (!validateEmail(email)) return setError('Invalid email format.');
     if (validateLogin(email, password, 'admin@hospital.com', 'Admin123')) {
-      navigation.reset({
-        index: 0,
-        routes: [{ name: 'MainApp' }],
-      });
+      navigation.reset({ index: 0, routes: [{ name: 'MainApp' }] });
     } else {
-      setError('Invalid credentials. Please try again.');
+      setError('Invalid credentials.');
     }
   };
 
   return (
-    <ImageBackground 
-      source={require('../../assets/images/bg.jpg')} 
-      style={styles.backgroundImage}
-      //resizeMode="cover"
-    >
-      <KeyboardAvoidingView 
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.overlay}
-      >
+    <ImageBackground source={require('../../assets/images/bg.jpg')} style={styles.backgroundImage} resizeMode="cover">
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.overlay}>
+        
+        <View style={styles.branding}>
+          <Text style={styles.logoText}>HM</Text>
+        </View>
+
         <View style={styles.card}>
-          <Text style={styles.header}>Admin Login</Text>
+          <Text style={styles.header}>Welcome Back</Text>
+          <Text style={styles.subHeader}>Log in to manage the hospital</Text>
           
           <TextInput
-            style={styles.input}
-            placeholder="Email (admin@hospital.com)"
-            placeholderTextColor="#888"
-            value={email}
-            onChangeText={setEmail}
-            autoCapitalize="none"
-            keyboardType="email-address"
+            style={styles.input} placeholder="admin@hospital.com" placeholderTextColor="#94A3B8"
+            value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address"
           />
           <TextInput
-            style={styles.input}
-            placeholder="Password (Admin123)"
-            placeholderTextColor="#888"
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry
+            style={styles.input} placeholder="Password" placeholderTextColor="#94A3B8"
+            value={password} onChangeText={setPassword} secureTextEntry
           />
           
           {error ? <Text style={styles.errorText}>{error}</Text> : null}
           
-          <CustomButton title="Login" onPress={handleLogin} style={styles.button} />
+          <CustomButton title="Sign In" onPress={handleLogin} style={styles.button} />
         </View>
       </KeyboardAvoidingView>
     </ImageBackground>
@@ -71,53 +50,27 @@ export default function LoginScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    width: '100%',
-    //height: '100%',
-  },
-  overlay: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 20,
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-  },
-  card: {
-    backgroundColor: '#ffffff',
-    borderRadius: 20,
-    padding: 25,
-    elevation: 8,
-    shadowColor: '#000', 
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-  },
-  header: {
-    fontSize: 26,
-    fontWeight: 'bold',
-    marginBottom: 30,
-    textAlign: 'center',
-    color: '#2B6CB0',
-  },
+  backgroundImage: { flex: 1, width: '100%', height: '100%' },
+  overlay: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(15, 23, 42, 0.6)' }, // Dark modern overlay
+  
+  branding: { alignSelf: 'center', backgroundColor: '#0EA5E9', width: 80, height: 80, borderRadius: 40, justifyContent: 'center', alignItems: 'center', marginBottom: 30, elevation: 10 },
+  logoText: { color: '#FFF', fontSize: 32, fontWeight: '900', letterSpacing: 1 },
+  
+  card: { backgroundColor: '#FFFFFF', borderRadius: 32, padding: 30, elevation: 10, shadowColor: '#000', shadowOffset: { width: 0, height: 10 }, shadowOpacity: 0.25, shadowRadius: 20 },
+  header: { fontSize: 28, fontWeight: '900', color: '#0F172A', textAlign: 'center', marginBottom: 4 },
+  subHeader: { fontSize: 15, color: '#64748B', textAlign: 'center', marginBottom: 30 },
+  
   input: {
-    height: 55,
-    borderColor: '#E2E8F0',
-    borderWidth: 1.5,
-    borderRadius: 12,
-    paddingHorizontal: 15,
-    marginBottom: 15,
-    backgroundColor: '#F7FAFC',
+    height: 60,
+    backgroundColor: '#F8FAFC',
+    borderRadius: 16,
+    paddingHorizontal: 20,
+    marginBottom: 16,
     fontSize: 16,
+    color: '#0F172A',
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
   },
-  button: {
-    marginTop: 10,
-    borderRadius: 12,
-    paddingVertical: 14,
-  },
-  errorText: {
-    color: '#E53E3E',
-    textAlign: 'center',
-    marginBottom: 15,
-    fontWeight: '600',
-  }
+  button: { marginTop: 10, borderRadius: 16 },
+  errorText: { color: '#EF4444', textAlign: 'center', marginBottom: 15, fontWeight: '600' }
 });
