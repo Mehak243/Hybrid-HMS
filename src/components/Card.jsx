@@ -14,7 +14,6 @@ export default function Card({ title, subtitle, details, imageSource, children }
           {details && <Text style={styles.details}>{details}</Text>}
         </View>
       </View>
-      {/* If there are buttons passed inside the card, they render here */}
       {children && <View style={styles.actionContainer}>{children}</View>}
     </View>
   );
@@ -33,7 +32,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 12,
     borderWidth: 1,
-    borderColor: '#F1F5F9', // Very subtle border to make it pop
+    borderColor: '#F1F5F9',
   },
   row: {
     flexDirection: 'row',
@@ -42,12 +41,12 @@ const styles = StyleSheet.create({
   avatar: {
     width: 60,
     height: 60,
-    borderRadius: 18, // Squircle shape
-    backgroundColor: '#E0F2FE', // Light blue fallback background
+    borderRadius: 18,
+    backgroundColor: '#E0F2FE',
     marginRight: 16,
   },
   textContainer: {
-    flex: 1, // Takes up remaining space
+    flex: 1,
   },
   title: {
     fontSize: 18,
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#0EA5E9', // Modern vibrant blue
+    color: '#0EA5E9',
     marginBottom: 4,
   },
   details: {
@@ -70,7 +69,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
     paddingTop: 12,
     borderTopWidth: 1,
-    borderTopColor: '#F1F5F9', // Clean divider line for buttons
+    borderTopColor: '#F1F5F9',
     alignItems: 'flex-end',
   }
 });
