@@ -51,7 +51,7 @@ export default function LoginScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   backgroundImage: { flex: 1, width: '100%', height: '100%' },
-  overlay: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(15, 23, 42, 0.6)' }, // Dark modern overlay
+  overlay: { flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(15, 23, 42, 0.6)' },
   
   branding: { alignSelf: 'center', backgroundColor: '#0EA5E9', width: 80, height: 80, borderRadius: 40, justifyContent: 'center', alignItems: 'center', marginBottom: 30, elevation: 10 },
   logoText: { color: '#FFF', fontSize: 32, fontWeight: '900', letterSpacing: 1 },

@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
   button: {
     paddingVertical: 16,
     paddingHorizontal: 20,
-    borderRadius: 16, // Smoother, modern curves
+    borderRadius: 16, 
     alignItems: 'center',
     justifyContent: 'center',
-    elevation: 3, // Soft shadow for Android
-    shadowColor: '#000', // Shadow for iOS
+    elevation: 3,
+    shadowColor: '#000', 
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.15,
     shadowRadius: 8,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 16,
-    fontWeight: '700', // Bolder text for better readability
+    fontWeight: '700',
     letterSpacing: 0.5,
   }
 });

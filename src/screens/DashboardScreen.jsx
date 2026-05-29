@@ -17,7 +17,6 @@ export default function DashboardScreen({ navigation }) {
       style={styles.backgroundImage}
       resizeMode="cover"
     >
-      {/* Moved the transparent wash to a dedicated overlay View for better control */}
       <View style={styles.overlay}>
         <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
           
@@ -28,7 +27,6 @@ export default function DashboardScreen({ navigation }) {
           </View>
           
           <View style={styles.grid}>
-            {/* Added distinct modern colors for each category */}
             <CustomButton title="🩺 Doctors" color="#0EA5E9" style={styles.gridBtn} onPress={() => navigation.navigate('Doctors')} />
             <CustomButton title="📋 Staff" color="#8B5CF6" style={styles.gridBtn} onPress={() => navigation.navigate('Staff')} />
             <CustomButton title="💉 Nurses" color="#EC4899" style={styles.gridBtn} onPress={() => navigation.navigate('Nurses')} />
@@ -40,14 +38,14 @@ export default function DashboardScreen({ navigation }) {
           <View style={styles.bottomSection}>
             <CustomButton 
               title="🌐 Externals" 
-              color="#1E293B" // Sleek dark slate color
+              color="#1E293B"
               style={styles.apiBtn} 
               onPress={() => navigation.navigate('ApiDemo')} 
             />
 
             <CustomButton 
               title="🚪 Logout" 
-              color="#EF4444" // Modern red
+              color="#EF4444"
               style={styles.logoutBtn} 
               onPress={handleLogout} 
             />
@@ -66,16 +64,16 @@ const styles = StyleSheet.create({
   },
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', // Slightly brighter glass effect
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
   container: {
-    padding: 24, // Increased padding for breathing room
+    padding: 24, 
     flexGrow: 1,
   },
   headerBox: {
     marginBottom: 35,
-    marginTop: 40, // Pushed down to avoid phone notch/status bar
-    alignItems: 'flex-start', // Left-aligned modern header
+    marginTop: 40, 
+    alignItems: 'flex-start', 
   },
   greeting: {
     fontSize: 16,
@@ -103,18 +101,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   gridBtn: {
-    width: '47%', // Gives a slightly wider gap between the two columns
+    width: '47%',
     height: 125,
     marginBottom: 16,
-    borderRadius: 24, // Deeply rounded 'squircle' look
-    elevation: 6, // Soft shadow for Android
-    shadowColor: '#000', // Soft shadow for iOS
+    borderRadius: 24, 
+    elevation: 6, 
+    shadowColor: '#000', 
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.15,
     shadowRadius: 10,
   },
   bottomSection: {
-    marginTop: 'auto', // Pushes the bottom buttons exactly to the end of the screen
+    marginTop: 'auto',
     paddingTop: 20,
   },
   apiBtn: {
