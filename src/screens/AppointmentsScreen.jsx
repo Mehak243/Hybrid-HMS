@@ -5,8 +5,8 @@ import Card from '../components/Card';
 import CustomButton from '../components/CustomButton';
 
 const initialAppointments = [
-  { id: '1', patientName: 'Tom Hanks', doctorName: 'Dr. Sarah Jenkins', date: '2026-05-10', time: '10:00 AM' },
-  { id: '2', patientName: 'Emma Watson', doctorName: 'Dr. Mark Sloan', date: '2026-05-11', time: '02:30 PM' },
+  { id: '1', patientName: 'Alishba', doctorName: 'Dr. Shayan', date: '2026-05-10', time: '10:00 AM' },
+  { id: '2', patientName: 'Simran', doctorName: 'Dr. Ibrahim', date: '2026-05-11', time: '02:30 PM' },
 ];
 
 export default function AppointmentsScreen() {

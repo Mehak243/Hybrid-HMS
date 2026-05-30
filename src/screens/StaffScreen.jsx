@@ -2,9 +2,9 @@ import { FlatList, StyleSheet, View } from 'react-native';
 import Card from '../components/Card';
 
 const staffMembers = [
-  { id: '1', name: 'Alice Cooper', role: 'Receptionist', phone: '555-0201', image: require('../../assets/images/staff1.jpg') },
-  { id: '2', name: 'John Doe', role: 'Janitor', phone: '555-0202', image: require('../../assets/images/staff1.jpg') },
-  { id: '3', name: 'Mary Smith', role: 'IT Support', phone: '555-0203', image: require('../../assets/images/staff1.jpg') },
+  { id: '1', name: 'Alice', role: 'Receptionist', phone: '555-0201', image: require('../../assets/images/staff1.jpg') },
+  { id: '2', name: 'John', role: 'Janitor', phone: '555-0202', image: require('../../assets/images/staff1.jpg') },
+  { id: '3', name: 'Mary', role: 'IT Support', phone: '555-0203', image: require('../../assets/images/staff1.jpg') },
 ];
 
 export default function StaffScreen() {

@@ -5,8 +5,8 @@ import Card from '../components/Card';
 import CustomButton from '../components/CustomButton';
 
 const initialRecords = [
-  { id: '1', patient: 'Tom Hanks', type: 'Billing', details: '$500', status: 'Paid', date: '2026-05-01' },
-  { id: '2', patient: 'Emma Watson', type: 'Prescription', details: 'Painkillers', status: 'Dispensed', date: '2026-05-05' },
+  { id: '1', patient: 'Mehak', type: 'Billing', details: '$500', status: 'Paid', date: '2026-05-01' },
+  { id: '2', patient: 'Wajeeha', type: 'Prescription', details: 'Painkillers', status: 'Dispensed', date: '2026-05-05' },
 ];
 
 export default function RecordsScreen() {

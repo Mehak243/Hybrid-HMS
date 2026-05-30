@@ -5,9 +5,9 @@ import Card from '../components/Card';
 import CustomButton from '../components/CustomButton';
 
 const initialDoctors = [
-  { id: '1', name: 'Dr. Sarah Jenkins', specialty: 'Cardiology', phone: '555-0101', email: 'sarah@hospital.com' },
-  { id: '2', name: 'Dr. Mark Sloan', specialty: 'Neurology', phone: '555-0102', email: 'mark@hospital.com' },
-  { id: '3', name: 'Dr. Emily Chen', specialty: 'Pediatrics', phone: '555-0103', email: 'emily@hospital.com' },
+  { id: '1', name: 'Dr. Shayan', specialty: 'Cardiology', phone: '555-0101', email: 'sarah@hospital.com' },
+  { id: '2', name: 'Dr. Suhaib', specialty: 'Neurology', phone: '555-0102', email: 'mark@hospital.com' },
+  { id: '3', name: 'Dr. Ibrahim', specialty: 'Pediatrics', phone: '555-0103', email: 'emily@hospital.com' },
 ];
 
 export default function DoctorsScreen() {

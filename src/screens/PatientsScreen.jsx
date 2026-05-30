@@ -5,8 +5,8 @@ import Card from '../components/Card';
 import CustomButton from '../components/CustomButton';
 
 const predefinedPatients = [
-  { id: '1', name: 'Tom Hanks', age: '45', disease: 'Flu', room: '101A', contact: '555-0401' },
-  { id: '2', name: 'Emma Watson', age: '30', disease: 'Migraine', room: '102B', contact: '555-0402' },
+  { id: '1', name: 'Alishba', age: '25', disease: 'Flu', room: '101A', contact: '555-0401' },
+  { id: '2', name: 'Simran', age: '30', disease: 'Migraine', room: '102B', contact: '555-0402' },
 ];
 
 export default function PatientsScreen() {
